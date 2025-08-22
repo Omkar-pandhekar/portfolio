@@ -38,7 +38,7 @@ export default async function HealthPage() {
               <h1>{project.year}</h1>
             </div>
           </div>
-          <div className="w-full relative flex items-center justify-center py-6 h-[500px]">
+          <div className="w-full relative flex items-center justify-center py-6 h-[600px]">
             <Image
               src={project.img1 || project.src || "/projects/website.jpg"}
               alt="Profile"
@@ -103,12 +103,8 @@ export default async function HealthPage() {
                       <div key={index} className="relative group">
                         <div className="mb-2">
                           <h3 className="text-lg font-medium opacity-80 border-b-2 py-4">
-                            {index === 0 && "User Overview Dashboard"}
-                            {index === 1 && "Appointment Management"}
-                            {index === 2 && "Real-time Chat System"}
-                            {index === 3 && "Medical Files & Documents"}
-                            {index === 4 && "Doctor Dashboard"}
-                            {index === 5 && "Hospital Management Overview"}
+                            {index === 0 && "Alumni Profile"}
+                            {index === 1 && "Admin Profile"}
                           </h3>
                         </div>
                         <img

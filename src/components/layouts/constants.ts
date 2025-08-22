@@ -33,7 +33,7 @@ export const projects = [
     description: "Development",
     year: 2024,
     key: "health",
-    src: "/projects/healthcare/Home.png",
+    src: "/projects/healthcare/Home.webp",
   },
   {
     id: 2,
@@ -41,7 +41,7 @@ export const projects = [
     title: "RentEase",
     description: "Real Estate Platform",
     year: 2024,
-    src: "/projects/rentease/intro.png",
+    src: "/projects/rentease/intro.webp",
   },
   {
     key: "notion",
@@ -56,6 +56,6 @@ export const projects = [
     title: "Social Shelf",
     description: "Library Management & Social Platform",
     year: 2024,
-    src: "projects/SocialShelf/Intro.png",
+    src: "projects/SocialShelf/Intro.webp",
   },
 ];

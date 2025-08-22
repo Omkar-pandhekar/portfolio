@@ -36,7 +36,7 @@ export default async function RenteasePage() {
               <h1>{project.year}</h1>
             </div>
           </div>
-          <div className="w-full relative flex items-center justify-center py-6 h-[500px]">
+          <div className="w-full relative flex items-center justify-center py-6 h-[600px]">
             <Image
               src={project.img1 || project.src || "/projects/website.jpg"}
               alt="Profile"
