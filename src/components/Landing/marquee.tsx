@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Star } from "lucide-react";
 
 export default function Marquee() {
   const items = [
@@ -38,10 +39,12 @@ export default function Marquee() {
           <div key={index} className="flex items-center">
             {items.map((item, itemIndex) => (
               <div key={`${index}-${itemIndex}`} className="flex items-center">
-                <span className="mx-8 text-3xl font-medium uppercase">
+                <span className="mx-8 text-3xl uppercase font-inter">
                   {item}
                 </span>
-                <span className="text-2xl text-gray-400">★</span>
+                <span className="text-2xl text-gray-400">
+                  <Star />
+                </span>
               </div>
             ))}
           </div>

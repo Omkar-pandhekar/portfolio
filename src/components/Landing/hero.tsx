@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { MoveUpRight } from "lucide-react";
+import { Hand, MoveUpRight } from "lucide-react";
 import Marquee from "./marquee";
 import { Button } from "../ui/button";
-import ShinyText from "../textanimations/ShinyText";
 import About from "./About";
+import { motion } from "framer-motion";
+import Connect from "../layouts/connect";
 
 export default function Hero() {
   return (
@@ -13,14 +14,27 @@ export default function Hero() {
       {/* Main content area - Centered with horizontal padding and controlled top padding */}
       <div className="relative z-10 mx-auto flex max-w-7xl flex-col px-4 sm:px-6 lg:px-8 pt-16 md:pt-24">
         {/* Top intro text */}
-        <div className="mb-4 text-lg font-medium md:text-xl">
-          👋 Hey! It&apos;s me Omkar,
+        <div className="mb-4 text-lg font-medium md:text-xl flex flex-row gap-2 items-center">
+          <motion.div
+            animate={{
+              rotate: [0, 14, -8, 14, -4, 10, 0],
+            }}
+            transition={{
+              duration: 2.5,
+              repeat: Infinity,
+              repeatType: "reverse",
+              repeatDelay: 2,
+            }}
+          >
+            <Hand color="#22c55e" />
+          </motion.div>
+          Hey! It&apos;s me Omkar,
         </div>
 
         {/* Main Heading */}
         <div className="flex flex-row">
           <div className="basis-5/6">
-            <h1 className="text-4xl font-medium sm:text-6xl md:text-6xl lg:text-7xl">
+            <h1 className="text-4xl font-bold font-orbitron sm:text-6xl md:text-6xl lg:text-7xl">
               Crafting <span className="text-green-500">purpose driven</span>
               <br />
               experiences that{" "}
@@ -38,12 +52,12 @@ export default function Hero() {
 
           <div>
             <p className="max-w-2xl text-base opacity-80 md:text-lg flex-1 dark:opacity-50">
-              I work with brands globally to build pixel-perfect, engaging, and
-              accessible digital experiences that drive results and achieve
-              business goals.
+              I collaborate with teams and individuals to build clean, engaging,
+              and accessible digital experiences that not only look great but
+              also solve real-world problems and support project goals.
             </p>
           </div>
-          <div className="flex-1 mb-6">
+          <div className="flex-1 mb-10">
             <div className="border-t-2 bg-gray-950 opacity-100"></div>
           </div>
         </div>
@@ -54,7 +68,7 @@ export default function Hero() {
             <Link
               href="/about" // Replace with actual link
             >
-              <Button className="rounded-full ">Know me better</Button>
+              <Button className="rounded-full px-8 py-6">Know me better</Button>
             </Link>
           </div>
           <div className="flex-1 mb-2">
@@ -95,6 +109,7 @@ export default function Hero() {
       </div>
       <Marquee />
       <About />
+      <Connect />
     </section>
   );
 }

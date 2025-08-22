@@ -1,8 +1,10 @@
+"use client";
 import { Star } from "lucide-react";
 import ShinyText from "../textanimations/ShinyText";
-import { TextGenerateEffect } from "../ui/text-generate-effect";
 import SectionContainer from "../layouts/SectionContainer";
 import Projects from "./Projects";
+import Info from "./Info";
+import { TextGenerateEffect } from "../ui/text-generate-effect";
 
 export default function About() {
   const word =
@@ -17,14 +19,15 @@ export default function About() {
             text="About Me"
             disabled={false}
             speed={1.5}
-            className="text-xl text-green-600 dark:text-green-600 "
+            className="text-xl text-green-600 dark:text-green-700 "
           />
         </div>
         <div className="flex items-center justify-cente mx-20  text-center">
-          <TextGenerateEffect words={word} />
+          <TextGenerateEffect words={word} className="font-saira" />
         </div>
       </div>
       <Projects />
+      <Info />
     </SectionContainer>
   );
 }

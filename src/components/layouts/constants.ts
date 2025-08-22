@@ -2,7 +2,7 @@ export const navigationLinks = [
   { link: "/about", name: "About" },
   { link: "/projects", name: "Projects" },
   { link: "/contact", name: "Contact" },
-  { link: "/designs", name: "Designs" },
+  { link: "/blog", name: "Blogs" },
 ];
 
 export const siteMetadata = {
@@ -19,33 +19,43 @@ export const siteMetadata = {
   // socialBanner: '/static/images/twitter-card.png',
   email: "pandhekar.omkar@gmail.com",
   github: "https://github.com/Omkar-pandhekar",
-  twitter: "https://x.com/dalelarroder",
-  facebook: "https://facebook.com/dlarroder",
+  twitter: "https://x.com/Omkar_Pandhekar",
   linkedin: "https://www.linkedin.com/in/omkar-pandhekar/",
   spotify: "https://open.spotify.com/user/12162121994?si=e685b3546f414967",
   leetcode: "https://leetcode.com/u/Omkar_pandhekar/",
-  steam: "https://steamcommunity.com/id/dlarroder/",
   locale: "en-US",
 };
 
 export const projects = [
   {
-    title: "Forest Adventure",
+    id: 1,
+    title: "Healthcare Portal",
     description: "Development",
-    year: "2024",
-    src: "https://images.unsplash.com/photo-1518710843675-2540dd79065c?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-
-  {
-    title: "Valley of life",
-    src: "https://images.unsplash.com/photo-1600271772470-bd22a42787b3?q=80&w=3072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    year: 2024,
+    key: "health",
+    src: "/projects/healthcare/Home.png",
   },
   {
-    title: "Sala behta hi jayega",
-    src: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=3070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    id: 2,
+    key: "rentease",
+    title: "RentEase",
+    description: "Real Estate Platform",
+    year: 2024,
+    src: "/projects/rentease/intro.png",
   },
   {
-    title: "Camping is for pros",
-    src: "https://images.unsplash.com/photo-1486915309851-b0cc1f8a0084?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    key: "notion",
+    title: "AI-Notion",
+    description: "Collaborative AI Editor",
+    year: 2024,
+    src: "projects/notion/Home.png",
+  },
+  {
+    id: 4,
+    key: "social-shelf",
+    title: "Social Shelf",
+    description: "Library Management & Social Platform",
+    year: 2024,
+    src: "projects/SocialShelf/Intro.png",
   },
 ];

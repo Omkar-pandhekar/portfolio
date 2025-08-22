@@ -2,8 +2,10 @@
 
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 interface CardData {
+  id: number;
   title: string;
   src: string;
   description: string;
@@ -26,7 +28,7 @@ export const Card = React.memo(
       onMouseEnter={() => setHovered(index)}
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "rounded-lg relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-60 md:h-80 w-full transition-all duration-300 ease-out",
+        "rounded-3xl relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-80 md:h-[350px] w-full transition-all duration-300 ease-out",
         hovered !== null && hovered !== index && "opacity-50"
       )}
     >
@@ -49,15 +51,17 @@ export function FocusCards({ cards }: { cards: CardData[] }) {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-7xl mx-auto md:px-8 w-full py-8">
       {cards.map((card, index) => (
         <div
-          key={card.title}
+          key={card.id}
           className={cn("", index % 2 !== 0 ? "md:mt-20" : "")}
         >
-          <Card
-            card={card}
-            index={index}
-            hovered={hovered}
-            setHovered={setHovered}
-          />
+          <Link href={`/projects/${card.key}`}>
+            <Card
+              card={card}
+              index={index}
+              hovered={hovered}
+              setHovered={setHovered}
+            />
+          </Link>
           <div className="mt-2 flex justify-between items-center">
             <div>
               <div className="text-lg font-medium ">{card.title}</div>
