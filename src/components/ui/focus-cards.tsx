@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 
 interface CardData {
-  id: string;
+  id?: string | number;
   key: string;
   title: string;
   src: string;
@@ -52,7 +52,7 @@ export function FocusCards({ cards }: { cards: CardData[] }) {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-7xl mx-auto md:px-8 w-full py-8">
       {cards.map((card, index) => (
         <div
-          key={card.id}
+          key={card.key}
           className={cn("", index % 2 !== 0 ? "md:mt-20" : "")}
         >
           <Link href={`/projects/${card.key}`}>
