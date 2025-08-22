@@ -73,7 +73,7 @@ export const projects = [
     href: "/projects/rentease",
     src: "/projects/rentease/Intro.webp",
     img1: "/projects/rentease/Home-1.webp",
-    screens: ["/projects/rentease/home.webp", "/projects/rentease/search.webp"],
+    screens: ["/projects/rentease/Home.webp", "/projects/rentease/Search.webp"],
   },
   {
     id: "3",
@@ -106,13 +106,12 @@ export const projects = [
         "Securely invite users to documents and manage their access with Owner and Editor roles via Clerk authentication.",
     },
     href: "https://ai-notion-m0yakz7yl-omkarpandhekar-8907s-projects.vercel.app",
-    src: "/projects/Notion/Poster.png",
+    src: "/projects/notion/Home.png",
     img1: "/projects/ai-notion/editor.png",
   },
   {
     id: "4",
     key: "social-shelf",
-
     title: "Social Shelf",
     description: "Library Management & Social Platform",
     intro:
@@ -140,11 +139,11 @@ export const projects = [
         "Secure, role-based access control with distinct features for Students, Admins, and regular users.",
     },
     href: "/projects/social-shelf",
-    src: "/projects/Socialshelf/Intro.webp",
-    img1: "/projects/Socialshelf/Home.webp",
+    src: "/projects/SocialShelf/Intro.webp",
+    img1: "/projects/SocialShelf/Home.webp",
     screens: [
-      "/projects/Socialshelf/Student-Dashboard.webp",
-      "/projects/SocialShelf/admin-dashboard.webp",
+      "/projects/SocialShelf/Student-Dashboard.webp",
+      "/projects/SocialShelf/Admin-dashboard.webp",
     ],
   },
 
@@ -181,10 +180,10 @@ export const projects = [
     },
     href: "/projects/alumni-platform",
     src: "/projects/alumni/Intro.webp",
-    img1: "/projects/alumni/home.webp",
+    img1: "/projects/alumni/Home.webp",
     screens: [
-      "/projects/alumni/alumni-profile.webp",
-      "/projects/alumni/admin-features.webp",
+      "/projects/alumni/Alumni-profile.webp",
+      "/projects/alumni/Admin-features.webp",
     ],
   },
   {
