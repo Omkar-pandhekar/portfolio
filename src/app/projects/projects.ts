@@ -43,7 +43,6 @@ export const projects = [
   {
     id: "2",
     key: "rentease",
-
     title: "RentEase",
     description: "Real Estate Platform",
     intro:
