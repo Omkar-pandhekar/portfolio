@@ -5,7 +5,8 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 
 interface CardData {
-  id: number;
+  id: string;
+  key: string;
   title: string;
   src: string;
   description: string;
