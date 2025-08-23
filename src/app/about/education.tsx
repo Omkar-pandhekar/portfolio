@@ -64,7 +64,7 @@ const Education = () => {
               <div key={idx} className="relative pb-10 last:pb-0">
                 <span className="absolute -left-[1px] top-1 h-3 w-3 rounded-full bg-green-500 ring-4 ring-green-500/20" />
 
-                <div className="rounded-lg border border-neutral-200/60 dark:border-neutral-800 bg-white/40 dark:bg-neutral-900/40 backdrop-blur-sm p-5">
+                <div className="rounded-lg border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/40 backdrop-blur-sm p-5">
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3">
                     <div className="flex items-center gap-2">
                       <GraduationCap className="h-5 w-5 text-green-500" />

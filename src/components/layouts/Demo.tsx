@@ -111,13 +111,48 @@ const LanguageCard = ({
 export default function Demo() {
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-      <Marquee className="[--duration:20s]">
+      <Marquee
+        style={
+          {
+            "--duration": "20s",
+          } as React.CSSProperties
+        }
+      >
         {languages.map((language) => (
           <LanguageCard key={language.name} {...language} />
         ))}
       </Marquee>
       <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
       <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
+
+      {/* Fallback CSS for production */}
+      <style jsx global>{`
+        @keyframes marquee {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(calc(-100% - 1rem));
+          }
+        }
+
+        .animate-marquee {
+          animation: marquee 20s linear infinite;
+        }
+
+        .animate-marquee-vertical {
+          animation: marquee-vertical 20s linear infinite;
+        }
+
+        @keyframes marquee-vertical {
+          from {
+            transform: translateY(0);
+          }
+          to {
+            transform: translateY(calc(-100% - 1rem));
+          }
+        }
+      `}</style>
     </div>
   );
 }

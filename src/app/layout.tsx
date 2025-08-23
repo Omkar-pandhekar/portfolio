@@ -37,14 +37,10 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${saira.variable} ${inter.variable}${orbitron.variable}`}
+      suppressHydrationWarning
     >
       <body>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <ThemeProvider>
           {/* <Header /> */}
           <NavbarDemo />
           {children}

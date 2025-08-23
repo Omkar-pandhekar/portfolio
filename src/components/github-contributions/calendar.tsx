@@ -20,16 +20,17 @@ export default function Calendar({ contributions }: Props) {
     <TooltipProvider delayDuration={400} skipDelayDuration={100}>
       <div
         ref={ref}
-        className="relative flex flex-col space-y-4 w-[calc(100%-53px)] md:w-[800px] lg:w-[1000px]"
+        className="relative flex flex-col space-y-3 md:space-y-4 w-full max-w-[calc(100%-20px)] sm:w-[calc(100%-40px)] md:w-[800px] lg:w-[1000px]"
       >
         {/* Month labels - properly aligned with weeks */}
-        <div className="flex justify-start overflow-hidden text-sm dark:text-neutral-400">
+        <div className="flex justify-start overflow-hidden text-xs sm:text-sm dark:text-neutral-400">
           {months.map((month, index) => (
             <div
               key={month.firstDay}
               className={classNames(
                 "text-center",
-                `${month.totalWeeks < 2 ? "invisible" : ""}`
+                `${month.totalWeeks < 2 ? "invisible" : ""}`,
+                index === 0 ? "" : "ml-1 sm:ml-1 md:ml-1"
               )}
               style={{
                 width: `${month.totalWeeks * 18}px`,
@@ -46,8 +47,7 @@ export default function Calendar({ contributions }: Props) {
           {weeks?.map((week) => (
             <div
               key={week.firstDay}
-              className="flex flex-col"
-              style={{ marginRight: "4px" }}
+              className="flex flex-col mr-0.5 sm:mr-1 md:mr-1"
             >
               {week.contributionDays.map((contribution) => {
                 const backgroundColor =
@@ -71,7 +71,7 @@ export default function Calendar({ contributions }: Props) {
                             transition: { delay: randomizedDelay },
                           },
                         }}
-                        className="my-[1.5px] block rounded-sm h-4 w-4 bg-neutral-200 dark:bg-[#161B22]"
+                        className="my-0.5 sm:my-0.5 md:my-[1.5px] block rounded-sm h-3 w-3 sm:h-3 sm:w-3 md:h-4 md:w-4 bg-neutral-200 dark:bg-[#161B22]"
                         style={
                           backgroundColor ? { backgroundColor } : undefined
                         }
@@ -88,10 +88,10 @@ export default function Calendar({ contributions }: Props) {
         </div>
 
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center gap-2 text-sm">
+          <div className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm">
             <span className="dark:text-neutral-400">Less</span>
-            <ul className="flex gap-1">
-              <motion.li className="h-2.5 w-2.5 rounded-xs bg-neutral-300 dark:bg-neutral-800" />
+            <ul className="flex gap-0.5 sm:gap-1">
+              <motion.li className="h-2 w-2 sm:h-2.5 sm:w-2.5 rounded-xs bg-neutral-300 dark:bg-neutral-800" />
               {colors.map((item, index) => (
                 <motion.li
                   key={item}
@@ -104,7 +104,7 @@ export default function Calendar({ contributions }: Props) {
                       transition: { delay: index * 0.5 },
                     },
                   }}
-                  className="h-2.5 w-2.5 rounded-xs"
+                  className="h-2 w-2 sm:h-2.5 sm:w-2.5 rounded-xs"
                   style={{ backgroundColor: item }}
                 />
               ))}

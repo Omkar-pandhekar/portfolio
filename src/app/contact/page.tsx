@@ -134,11 +134,11 @@ export default function Contact() {
         </form>
 
         {/* Right: Profile Card */}
-        <div className=" max-h-80 flex-1 rounded-2xl p-8 flex flex-col justify-between mt-1 dark:bg-zinc-900 ">
+        <div className=" max-h-80 flex-1 rounded-2xl p-8 flex flex-col justify-between mt-1 dark:bg-zinc-900 bg-white">
           <div className="flex flex-col gap-4 -mt-2">
             <div className="flex items-center gap-2">
               <span className="h-3 w-3 bg-green-500 rounded-full"></span>
-              <span className="text-green-400 text-sm bg-green-500 bg-opacity-20 rounded-full px-2 py-1">
+              <span className="text-sm bg-green-300 bg-opacity-20 rounded-full px-3 py-1">
                 Available for work
               </span>
             </div>
@@ -149,13 +149,13 @@ export default function Contact() {
               height={500}
               className="w-28 h-28 rounded-full border-4 border-spacing-3 object-cover"
             />
-            <p className="text-lg/2 leading-relaxed opacity-60">
+            <p className="text-lg/2 leading-relaxed opacity-80">
               My inbox is always open. Whether you have a project or just want
               to say Hi. I would love to hear from you. Feel free to contact me
               and I&apos;ll get back to you.
             </p>
           </div>
-          <div className="flex gap-4 text-gray-300 text-2xl pt-4">
+          <div className="flex gap-4 opacity-60 text-2xl pt-4">
             {/* Replace # with your social links */}
             <a href={siteMetadata.linkedin}>
               <i className="fab fa-linkedin">

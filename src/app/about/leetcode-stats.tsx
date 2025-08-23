@@ -131,7 +131,7 @@ const LeetCodeStats = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="bg-zinc-200 dark:bg-zinc-900 backdrop-blur-sm rounded-lg p-6 "
+          className="bg-white dark:bg-zinc-900 backdrop-blur-sm rounded-lg p-6 "
         >
           <div className="flex items-center justify-between">
             <div>
@@ -147,7 +147,7 @@ const LeetCodeStats = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-zinc-200 dark:bg-zinc-900 backdrop-blur-sm rounded-lg p-6 "
+          className="bg-white dark:bg-zinc-900 backdrop-blur-sm rounded-lg p-6 "
         >
           <div className="flex items-center justify-between">
             <div>
@@ -165,14 +165,12 @@ const LeetCodeStats = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="bg-zinc-200 dark:bg-zinc-900 backdrop-blur-sm rounded-lg p-6 "
+          className="bg-white dark:bg-zinc-900 backdrop-blur-sm rounded-lg p-6 "
         >
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-gray-400 text-sm">Acceptance Rate</p>
-              <p className="text-3xl font-bold text-white">
-                {stats.acceptanceRate}%
-              </p>
+              <p className=" text-sm">Acceptance Rate</p>
+              <p className="text-3xl font-bold ">{stats.acceptanceRate}%</p>
             </div>
             <Target className="w-8 h-8 text-blue-400" />
           </div>
@@ -184,11 +182,9 @@ const LeetCodeStats = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
-        className="bg-zinc-200 dark:bg-zinc-900 backdrop-blur-sm rounded-lg p-6 "
+        className="bg-white dark:bg-zinc-900 backdrop-blur-sm rounded-lg p-6 "
       >
-        <h3 className="text-xl font-semibold text-white mb-4">
-          Difficulty Distribution
-        </h3>
+        <h3 className="text-xl font-semibold mb-4">Difficulty Distribution</h3>
         <div className="space-y-4">
           {[
             { difficulty: "easy", count: stats.easy, color: "bg-green-500" },
@@ -211,7 +207,7 @@ const LeetCodeStats = () => {
                     ]
                   }
                 </span>
-                <span className="text-white capitalize font-medium">
+                <span className=" capitalize font-medium">
                   {item.difficulty}
                 </span>
               </div>
@@ -228,7 +224,7 @@ const LeetCodeStats = () => {
                     }}
                   />
                 </div>
-                <span className="text-white font-semibold min-w-[3rem] text-right">
+                <span className=" font-semibold min-w-[3rem] text-right">
                   {item.count}
                 </span>
               </div>
