@@ -41,14 +41,14 @@ export const projects = [
     title: "RentEase",
     description: "Real Estate Platform",
     year: 2024,
-    src: "/projects/rentease/intro.webp",
+    src: "/projects/rentease/Intro.webp",
   },
   {
     key: "notion",
     title: "AI-Notion",
     description: "Collaborative AI Editor",
     year: 2024,
-    src: "projects/notion/Home.png",
+    src: "/projects/notion/Home.png",
   },
   {
     id: 4,
@@ -56,6 +56,6 @@ export const projects = [
     title: "Social Shelf",
     description: "Library Management & Social Platform",
     year: 2024,
-    src: "projects/SocialShelf/Intro.webp",
+    src: "/projects/SocialShelf/Intro.webp",
   },
 ];

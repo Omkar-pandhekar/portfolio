@@ -106,8 +106,8 @@ export const projects = [
         "Securely invite users to documents and manage their access with Owner and Editor roles via Clerk authentication.",
     },
     href: "https://ai-notion-m0yakz7yl-omkarpandhekar-8907s-projects.vercel.app",
-    src: "/projects/notion/Home.png",
-    img1: "/projects/ai-notion/editor.png",
+    src: "/projects/notion/Home-1.webp",
+    img1: "/projects/notion/Home-1.webp",
   },
   {
     id: "4",
