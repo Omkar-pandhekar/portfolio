@@ -44,6 +44,7 @@ export const projects = [
     src: "/projects/rentease/Intro.webp",
   },
   {
+    id: 3,
     key: "notion",
     title: "AI-Notion",
     description: "Collaborative AI Editor",
