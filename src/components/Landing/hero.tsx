@@ -35,10 +35,15 @@ export default function Hero() {
         <div className="flex flex-row">
           <div className="basis-5/6">
             <h1 className="text-4xl font-semibold font-clash sm:text-6xl md:text-6xl lg:text-7xl">
-              Crafting <span className="text-green-500">purpose driven</span>
+              Crafting{" "}
+              <span className="text-green-500 dark:text-lime-300">
+                purpose driven
+              </span>
               <br />
               experiences that{" "}
-              <span className="text-green-500">inspire & engage.</span>
+              <span className="text-green-500 dark:text-lime-300">
+                inspire & engage.
+              </span>
             </h1>
           </div>
           {/* <div className="basis-64">
