@@ -11,7 +11,6 @@ interface CardData {
   src: string;
   description: string;
   year: number;
-  img1: string;
 }
 
 export const Card = React.memo(
@@ -35,7 +34,7 @@ export const Card = React.memo(
       )}
     >
       <img
-        src={card.src || card.img1}
+        src={card.src}
         alt={card.title}
         className="object-cover absolute inset-0 w-full h-full"
       />
