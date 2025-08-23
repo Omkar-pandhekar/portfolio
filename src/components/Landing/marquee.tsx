@@ -16,9 +16,9 @@ export default function Marquee() {
   return (
     <div className="w-full border-y border-gray-200 py-12 overflow-hidden opacity-30 relative my-16">
       {/* Left fade */}
-      <div className="absolute left-0 top-0 bottom-0 w-[40rem] bg-gradient-to-r from-background to-transparent z-10"></div>
+      <div className="absolute left-0 top-0 bottom-0 w-[40rem] bg-gradient-to-r from-background to-transparent z-10 hidden sm:block"></div>
       {/* Right fade */}
-      <div className="absolute right-0 top-0 bottom-0 w-[40rem] bg-gradient-to-l from-background to-transparent z-10"></div>
+      <div className="absolute right-0 top-0 bottom-0 w-[40rem] bg-gradient-to-l from-background to-transparent z-10 hidden sm:block"></div>
 
       <motion.div
         className="flex whitespace-nowrap"

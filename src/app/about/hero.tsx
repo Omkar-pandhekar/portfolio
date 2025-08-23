@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="space-y-4 pt-5 pb-10">
       <div className="flex flex-col md:flex-row items-center justify-center gap-0">
         <div className="flex-1 space-y-2">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-neutral-100">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-clash font-bold text-neutral-900 dark:text-neutral-100">
             Omkar Pandhekar
           </h1>
           <p className="text-lg md:text-xl text-neutral-900 dark:text-neutral-100 font-medium pl-1">

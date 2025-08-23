@@ -5,7 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Star } from "lucide-react";
+import { Sparkle } from "lucide-react";
 import SectionContainer from "../layouts/SectionContainer";
 import ShinyText from "../textanimations/ShinyText";
 import { TypingAnimation } from "../magicui/typing-animation";
@@ -47,17 +47,17 @@ export default function Info() {
     <SectionContainer>
       <div className="relative w-full py-12 pt-20">
         <div className="flex items-center gap-2 ml-8 ">
-          <Star size={18} color="#16a34a" />
+          <Sparkle size={18} className="text-green-500 dark:text-lime-500" />
           <ShinyText
             text="Info"
             disabled={false}
             speed={1.5}
-            className="text-xl text-green-600 dark:text-green-600 "
+            className="text-xl text-green-500 dark:text-lime-500 "
           />
         </div>
         <div className="w-full">
           <div className="ml-8 -mt-4 mb-4">
-            <TypingAnimation className="font-inter tracking-normal font-bold">
+            <TypingAnimation className="font-clash tracking-wide font-semibold">
               Areas of Expertise
             </TypingAnimation>
           </div>

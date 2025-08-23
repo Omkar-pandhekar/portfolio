@@ -26,14 +26,21 @@ const starting = () => {
           </div>
         </div>
         <div className="flex-1 flex flex-col items-start">
-          <h1 className="text-4xl font-bold font-inter sm:text-6xl md:text-6xl lg:text-6xl pb-8 tracking-wide">
+          <h1 className="text-3xl font-medium font-clash tracking-wider sm:text-4xl md:text-6xl lg:text-6xl pb-8 ">
             <div className="flex items-center gap-4">
               <span>A</span>
-              <span className="text-green-500">Creative</span>
-              <WordRotate
-                words={["Developer", "Thinker"]}
-                className="text-green-500"
-              />
+              <span className="text-green-500 dark:text-lime-300">
+                Creative
+              </span>
+              <span className="hidden sm:inline">
+                <WordRotate
+                  words={["Developer", "Thinker"]}
+                  className="text-green-500 dark:text-lime-300"
+                />
+              </span>
+              <span className="sm:hidden text-green-500 dark:text-lime-300">
+                Developer
+              </span>
             </div>
             &amp;{" "}
             <span className="text-neutral-900 dark:text-neutral-100">

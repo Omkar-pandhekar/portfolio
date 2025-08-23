@@ -3,7 +3,7 @@
 import React from "react";
 import SectionContainer from "@/components/layouts/SectionContainer";
 import ShinyText from "@/components/textanimations/ShinyText";
-import { Star, Calendar, ArrowRight } from "lucide-react";
+import { Star, Calendar, ArrowRight, Sparkle } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { blogPosts } from "./blogs";
@@ -14,12 +14,12 @@ const BlogPage = () => {
       <div className="relative w-full pt-48">
         {/* Header */}
         <div className="flex items-center gap-2 ml-8">
-          <Star size={18} color="#16a34a" />
+          <Sparkle size={18} className="text-green-500 dark:text-lime-500" />
           <ShinyText
             text="Blog"
             disabled={false}
             speed={1.5}
-            className="text-xl text-green-600"
+            className="text-xl text-green-500 dark:text-lime-500"
           />
         </div>
 

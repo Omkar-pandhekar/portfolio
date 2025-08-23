@@ -1,5 +1,5 @@
 "use client";
-import { Star } from "lucide-react";
+import { Sparkle } from "lucide-react";
 import ShinyText from "../textanimations/ShinyText";
 import SectionContainer from "../layouts/SectionContainer";
 import Projects from "./Projects";
@@ -14,12 +14,12 @@ export default function About() {
     <SectionContainer>
       <div className="relative w-full">
         <div className="flex items-center justify-center gap-2">
-          <Star size={18} color="#16a34a" />
+          <Sparkle size={18} className="text-green-500 dark:text-lime-500" />
           <ShinyText
             text="About Me"
             disabled={false}
             speed={1.5}
-            className="text-xl text-green-600 dark:text-green-700 "
+            className="text-xl text-green-500 dark:text-lime-500 "
           />
         </div>
         <div className="flex items-center justify-cente mx-20  text-center">

@@ -133,7 +133,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
     <div className="flex items-center space-x-4 text-base leading-5">
       <div className="hidden space-x-6 sm:flex">
         {items.map((item, idx) => {
-          const active = pathName?.includes(item.link);
+          const active = pathName === item.link;
           return (
             <a
               key={`link-${idx}`}
@@ -141,14 +141,14 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
               onClick={onItemClick}
               href={item.link}
               className={classNames(
-                "relative px-4 py-2 text-black dark:text-neutral-300 horizontal-underline text-base mx-2",
+                "relative px-4 py-2 text-black dark:text-neutral-300 horizontal-underline text-base mx-2 font-clash font-extralight",
                 {
                   "horizontal-underline-active": active,
                 }
               )}
               aria-label={item.name}
             >
-              <span className="font-semibold tracking-wide">{item.name}</span>
+              <span className="tracking-wide">{item.name}</span>
             </a>
           );
         })}
@@ -177,7 +177,7 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
         damping: 50,
       }}
       className={cn(
-        "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-transparent px-0 py-2 lg:hidden",
+        "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-transparent px-0 py-2 lg:hidden rounded-full",
         visible && "bg-white/80 dark:bg-neutral-950/80",
         className
       )}
@@ -194,7 +194,7 @@ export const MobileNavHeader = ({
   return (
     <div
       className={cn(
-        "flex w-full flex-row items-center justify-between",
+        "flex w-full flex-row items-center justify-between rounded-full ",
         className
       )}
     >
@@ -247,12 +247,7 @@ export const NavbarLogo = () => {
   return (
     <Link
       href="/"
-      className={classNames(
-        "horizontal-underline hidden text-3xl font-extrabold sm:block ",
-        {
-          "horizontal-underline-active": pathName === "/",
-        }
-      )}
+      className="horizontal-underline text-3xl font-extrabold"
       aria-label="d."
     >
       OP

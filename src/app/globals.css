@@ -85,10 +85,18 @@ input:-webkit-autofill:focus {
   transition: background-color 600000s 0s, color 600000s 0s;
 }
 
+:root {
+  --underline-color: #22c55e;
+}
+
+.dark {
+  --underline-color: #84cc16; /* lime-500 for dark mode */
+}
+
 .horizontal-underline {
   border-bottom-width: 0;
   background-image: linear-gradient(transparent, transparent),
-    linear-gradient(#0fda31, #0fda31);
+    linear-gradient(var(--underline-color), var(--underline-color));
   background-size: 0 3px;
   background-position: 0 100%;
   background-repeat: no-repeat;
@@ -177,4 +185,32 @@ input:-webkit-autofill:focus {
       transform: translateY(calc(-100% - var(--gap)));
     }
   }
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay/ClashDisplay-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay/ClashDisplay-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay/ClashDisplay-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay/ClashDisplay-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
 }

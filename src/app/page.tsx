@@ -3,6 +3,7 @@
 import Hero from "@/components/Landing/hero";
 import { useEffect } from "react";
 import Lenis from "lenis";
+import { LoadingProgress } from "@/components/magicui/loading-progress";
 
 export default function Home() {
   useEffect(() => {
@@ -16,6 +17,7 @@ export default function Home() {
 
   return (
     <>
+      <LoadingProgress />
       <Hero />
     </>
   );

@@ -1,8 +1,8 @@
 export const navigationLinks = [
+  { link: "/", name: "Home" },
   { link: "/about", name: "About" },
   { link: "/projects", name: "Projects" },
   { link: "/contact", name: "Contact" },
-  { link: "/blog", name: "Blogs" },
 ];
 
 export const siteMetadata = {
@@ -31,7 +31,7 @@ export const projects = [
     id: 1,
     title: "Healthcare Portal",
     description: "Development",
-    year: 2024,
+    year: 2025,
     key: "health",
     src: "/projects/healthcare/Home.webp",
   },
@@ -40,16 +40,16 @@ export const projects = [
     key: "rentease",
     title: "RentEase",
     description: "Real Estate Platform",
-    year: 2024,
-    src: "/projects/rentease/Intro.webp",
+    year: 2025,
+    src: "/projects/rentease/intro.webp",
   },
   {
     id: 3,
     key: "notion",
     title: "AI-Notion",
     description: "Collaborative AI Editor",
-    year: 2024,
-    src: "/projects/notion/Home.png",
+    year: 2025,
+    src: "/projects/notion/Home-1.webp",
   },
   {
     id: 4,

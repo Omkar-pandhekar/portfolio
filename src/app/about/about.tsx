@@ -1,6 +1,6 @@
 import SectionContainer from "@/components/layouts/SectionContainer";
 import ShinyText from "@/components/textanimations/ShinyText";
-import { Star } from "lucide-react";
+import { Sparkle } from "lucide-react";
 import React from "react";
 import Hero from "./hero";
 import GithubContributions from "@/components/github-contributions/github-contributions";
@@ -10,13 +10,13 @@ const about = () => {
   return (
     <SectionContainer>
       <div className="relative w-full pt-20">
-        <div className="flex items-center gap-2 ml-8">
-          <Star size={18} color="#16a34a" />
+        <div className="flex items-center gap-2 ml-8 sm:pl-2">
+          <Sparkle size={18} className="text-green-500 dark:text-lime-500" />
           <ShinyText
             text="About"
             disabled={false}
             speed={1.5}
-            className="text-xl text-green-600"
+            className="text-xl text-green-500 dark:text-lime-500"
           />
         </div>
       </div>

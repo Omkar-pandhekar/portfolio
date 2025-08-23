@@ -34,7 +34,7 @@ export default function Hero() {
         {/* Main Heading */}
         <div className="flex flex-row">
           <div className="basis-5/6">
-            <h1 className="text-4xl font-bold font-orbitron sm:text-6xl md:text-6xl lg:text-7xl">
+            <h1 className="text-4xl font-semibold font-clash sm:text-6xl md:text-6xl lg:text-7xl">
               Crafting <span className="text-green-500">purpose driven</span>
               <br />
               experiences that{" "}
@@ -73,7 +73,7 @@ export default function Hero() {
               </Button>
             </Link>
           </div>
-          <div className="flex-1 mb-2 w-full">
+          <div className="flex-1 mb-2 w-full hidden sm:block">
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 text-xs sm:text-sm font-medium uppercase opacity-80">
               <a
                 href="https://linkedin.com" // Replace with actual links

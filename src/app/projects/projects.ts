@@ -8,7 +8,7 @@ export const projects = [
       "The Healthcare Portal is a telemedicine platform that connects patients, doctors, and hospitals. It facilitates appointment booking, secure file sharing, and provides an AI-powered symptom checker to improve healthcare accessibility.",
     overview:
       "Built with Next.js and MongoDB, this platform offers a scalable and secure solution for digital healthcare. It features a multi-role system and real-time chat to enhance patient-doctor communication and streamline medical services.",
-    year: 2024,
+    year: 2025,
     techstack: [
       "Next.js",
       "MongoDB",
@@ -49,7 +49,7 @@ export const projects = [
       "A full-stack rental property management platform that connects property managers with tenants, streamlining the entire rental process from discovery to lease management.",
     overview:
       "Developed using Next.js 15 (React 19) and a PostgreSQL backend with PostGIS, RentEase provides a type-safe, mobile-first experience. Its architecture is built for performance and scalability, featuring interactive maps and a modern, user-friendly interface to simplify property management.",
-    year: 2024,
+    year: 2025,
     techstack: [
       "Next.js",
       "React 19",
@@ -71,8 +71,8 @@ export const projects = [
         "Manages monthly rent, security deposits, and tracks payment history with multiple statuses.",
     },
     href: "/projects/rentease",
-    src: "/projects/rentease/Intro.webp",
-    img1: "/projects/rentease/Home-1.webp",
+    src: "/projects/rentease/intro.webp",
+    img1: "/projects/rentease/Start.webp",
     screens: ["/projects/rentease/Home.webp", "/projects/rentease/Search.webp"],
   },
   {
@@ -84,7 +84,7 @@ export const projects = [
       "A modern document editor that combines real-time collaboration with powerful AI capabilities for translation, summarization, and document analysis.",
     overview:
       "Using Next.js 15 with Turbopack, Liveblocks for collaboration, and Firebase for the backend, AI-Notion delivers a seamless, high-performance editing experience. It's a sophisticated tool designed for today's distributed work environments, bridging the gap between traditional editors and intelligent, collaborative platforms.",
-    year: 2024,
+    year: 2025,
     techstack: [
       "Next.js",
       "Firebase",
@@ -106,8 +106,8 @@ export const projects = [
         "Securely invite users to documents and manage their access with Owner and Editor roles via Clerk authentication.",
     },
     href: "https://ai-notion-m0yakz7yl-omkarpandhekar-8907s-projects.vercel.app",
-    src: "/projects/notion/Home-1.webp",
-    img1: "/projects/notion/Home-1.webp",
+    src: "/projects/notion/Home.png",
+    img1: "",
   },
   {
     id: "4",
@@ -118,7 +118,7 @@ export const projects = [
       "A comprehensive library management system that combines traditional services with modern social features, allowing users to rent and donate books, join events, and connect with other readers.",
     overview:
       "Built with Next.js 15 and MongoDB, Social Shelf offers a modern, scalable solution for libraries and educational institutions. It features a responsive, mobile-first design with a theme toggle for dark/light mode and smooth animations to create an engaging user experience.",
-    year: 2023,
+    year: 2024,
     techstack: [
       "Next.js",
       "MongoDB",
@@ -157,7 +157,7 @@ export const projects = [
       "A comprehensive web application designed to connect alumni, students, and administrators of the Deogiri Institute, fostering lifelong relationships and professional networking.",
     overview:
       "Built with the MERN stack (MongoDB, Express.js, React, Node.js) and Vite, this platform uses a modern component-based architecture and a mobile-first design. It serves as a centralized hub for community engagement, offering tools for career development, event management, and institutional support.",
-    year: 2023,
+    year: 2024,
     techstack: [
       "React",
       "Node.js",
@@ -179,11 +179,11 @@ export const projects = [
         "Integrates with Cloudinary for efficient cloud storage and delivery of images for the gallery and user profiles.",
     },
     href: "/projects/alumni-platform",
-    src: "/projects/alumni/Intro.webp",
+    src: "/projects/alumni/Poster.webp",
     img1: "/projects/alumni/Home.webp",
     screens: [
-      "/projects/alumni/Alumni-profile.webp",
-      "/projects/alumni/Admin-features.webp",
+      "/projects/alumni/AlumniProfile.webp",
+      "/projects/alumni/AdminFeatures.webp",
     ],
   },
   {
@@ -195,7 +195,7 @@ export const projects = [
       "A machine learning web application that predicts the selling price of used cars based on various vehicle characteristics and specifications for the Indian market.",
     overview:
       "Built with Python and Streamlit, this application uses a trained Linear Regression model to provide accurate price estimates. It features a comprehensive data preprocessing pipeline and an interactive user interface for real-time predictions.",
-    year: 2023,
+    year: 2024,
     techstack: ["Python", "Streamlit", "Scikit-learn", "Pandas", "NumPy"],
     features: {
       "Interactive UI":
