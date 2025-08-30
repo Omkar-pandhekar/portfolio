@@ -133,7 +133,9 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
     <div className="flex items-center space-x-4 text-base leading-5">
       <div className="hidden space-x-6 sm:flex">
         {items.map((item, idx) => {
-          const active = pathName === item.link;
+          const active =
+            pathName === item.link ||
+            (item.link !== "/" && pathName.startsWith(item.link));
           return (
             <a
               key={`link-${idx}`}
@@ -161,7 +163,7 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
   return (
     <motion.div
       animate={{
-        backdropFilter: visible ? "blur(10px)" : "none",
+        backdropFilter: visible ? "blur(5px)" : "none",
         boxShadow: visible
           ? "0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset"
           : "none",
@@ -194,7 +196,7 @@ export const MobileNavHeader = ({
   return (
     <div
       className={cn(
-        "flex w-full flex-row items-center justify-between rounded-full ",
+        "flex w-full flex-row items-center justify-between rounded-full  ",
         className
       )}
     >

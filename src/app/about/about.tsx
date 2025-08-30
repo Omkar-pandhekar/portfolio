@@ -5,12 +5,13 @@ import React from "react";
 import Hero from "./hero";
 import GithubContributions from "@/components/github-contributions/github-contributions";
 import LeetCodeStats from "./leetcode-stats";
+import Education from "./education";
 
 const about = () => {
   return (
     <SectionContainer>
       <div className="relative w-full pt-20">
-        <div className="flex items-center gap-2 ml-8 sm:pl-2">
+        <div className="flex items-center gap-2">
           <Sparkle size={18} className="text-green-500 dark:text-lime-500" />
           <ShinyText
             text="About"
@@ -20,9 +21,10 @@ const about = () => {
           />
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center gap-6 w-full px-8">
+      <div className="flex flex-col items-center justify-center gap-6 w-full">
         <Hero />
-        <div className="w-full">
+        <Education />
+        <div className="w-full pt-10">
           <GithubContributions />
         </div>
         <div className="w-full">

@@ -82,7 +82,7 @@ export default function Contact() {
             />
           </div>
           <div className="ml-8">
-            <TypingAnimation className="font-inter tracking-normal font-bold">
+            <TypingAnimation className="font-clash tracking-wide font-semibold">
               Let&apos;s Talk
             </TypingAnimation>
           </div>
@@ -102,6 +102,7 @@ export default function Contact() {
                 onChange={handleChange}
                 className="w-full p-4 rounded-xl border mt-1"
                 required
+                autoComplete="off"
               />
             </label>
             <label>
@@ -113,6 +114,7 @@ export default function Contact() {
                 onChange={handleChange}
                 className="w-full p-4 rounded-xl mt-1.5"
                 required
+                autoComplete="off"
               />
             </label>
             <label className="flex-1 flex flex-col">
@@ -124,6 +126,7 @@ export default function Contact() {
                 className="w-full p-4 rounded-xl mt-1.5 flex-1"
                 rows={4}
                 required
+                autoComplete="off"
               ></Textarea>
             </label>
 
@@ -137,7 +140,7 @@ export default function Contact() {
           </form>
 
           {/* Right: Profile Card */}
-          <div className=" max-h-80 flex-1 rounded-2xl p-8 flex flex-col justify-between mt-1 dark:bg-zinc-900 bg-white">
+          <div className=" flex-1 rounded-2xl p-8 flex flex-col justify-between mt-1 dark:bg-zinc-900 bg-white">
             <div className="flex flex-col gap-4 -mt-2">
               <div className="flex items-center gap-2">
                 <span className="h-3 w-3 bg-green-500 dark:bg-lime-500 rounded-full"></span>
@@ -152,7 +155,7 @@ export default function Contact() {
                 height={500}
                 className="w-28 h-28 rounded-full border-4 border-spacing-3 object-cover"
               />
-              <p className="text-lg/2 leading-relaxed opacity-80">
+              <p className="text-xl font-clash leading-relaxed opacity-80 text-justify">
                 My inbox is always open. Whether you have a project or just want
                 to say Hi. I would love to hear from you. Feel free to contact
                 me and I&apos;ll get back to you.

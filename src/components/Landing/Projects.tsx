@@ -27,7 +27,7 @@ export default function Projects() {
           </TypingAnimation>
         </div>
         <div className="w-full">
-          <FocusCards cards={projects} />
+          <FocusCards cards={projects.slice(1, 5)} />
         </div>
         <div className="flex justify-center my-6 ">
           <Link href="/projects">

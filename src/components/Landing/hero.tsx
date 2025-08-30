@@ -7,8 +7,37 @@ import { Button } from "../ui/button";
 import About from "./About";
 import { motion } from "framer-motion";
 import Connect from "../layouts/connect";
+import Projects from "./Projects";
+import Info from "./Info";
+import { siteMetadata } from "@/components/layouts/constants";
+import { useState } from "react";
 
 export default function Hero() {
+  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
+
+  const socialLinks = [
+    {
+      name: "LINKEDIN",
+      href: siteMetadata.linkedin,
+      icon: <MoveUpRight size={14} className="sm:w-4 sm:h-4" />,
+    },
+    {
+      name: "GITHUB",
+      href: siteMetadata.github,
+      icon: <MoveUpRight size={14} className="sm:w-4 sm:h-4" />,
+    },
+    {
+      name: "LEETCODE",
+      href: siteMetadata.leetcode,
+      icon: <MoveUpRight size={14} className="sm:w-4 sm:h-4" />,
+    },
+    {
+      name: "GMAIL",
+      href: "mailto:pandhekar.omkar@gmail.com",
+      icon: <MoveUpRight size={14} className="sm:w-4 sm:h-4" />,
+    },
+  ];
+
   return (
     <section className="relative w-full pt-24">
       {/* Main content area - Centered with horizontal padding and controlled top padding */}
@@ -26,7 +55,7 @@ export default function Hero() {
               repeatDelay: 2,
             }}
           >
-            <Hand color="#22c55e" />
+            <Hand className="text-green-500 dark:text-lime-300" />
           </motion.div>
           Hey! It&apos;s me Omkar,
         </div>
@@ -57,9 +86,10 @@ export default function Hero() {
 
           <div>
             <p className="max-w-2xl text-base opacity-80 md:text-lg flex-1 dark:opacity-50">
-              I collaborate with teams and individuals to build clean, engaging,
-              and accessible digital experiences that not only look great but
-              also solve real-world problems and support project goals.
+              I specialize in building end-to-end digital experiences, from the
+              back-end logic to the user-facing interface, with a focus on
+              solving real-world challenges through clean code and intuitive
+              design.
             </p>
           </div>
           <div className="flex-1 mb-10">
@@ -80,42 +110,43 @@ export default function Hero() {
           </div>
           <div className="flex-1 mb-2 w-full hidden sm:block">
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 text-xs sm:text-sm font-medium uppercase opacity-80">
-              <a
-                href="https://linkedin.com" // Replace with actual links
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline flex items-center gap-1 w-full sm:w-auto"
-              >
-                LINKEDIN <MoveUpRight size={14} className="sm:w-4 sm:h-4" />
-              </a>
-              <a
-                href="https://github.com" // Replace with actual links
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline flex items-center gap-1 w-full sm:w-auto"
-              >
-                GITHUB <MoveUpRight size={14} className="sm:w-4 sm:h-4" />
-              </a>
-              <a
-                href="https://instagram.com" // Replace with actual links
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline flex items-center gap-1 w-full sm:w-auto"
-              >
-                INSTAGRAM <MoveUpRight size={14} className="sm:w-4 sm:h-4" />
-              </a>
-              <a
-                href="mailto:your.email@example.com" // Replace with actual email
-                className="hover:underline flex items-center gap-1 w-full sm:w-auto"
-              >
-                GMAIL <MoveUpRight size={14} className="sm:w-4 sm:h-4" />
-              </a>
+              {socialLinks.map((link, index) => (
+                <motion.a
+                  key={link.name}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 w-full sm:w-auto transition-all duration-300"
+                  onMouseEnter={() => setHoveredLink(link.name)}
+                  onMouseLeave={() => setHoveredLink(null)}
+                  animate={{
+                    opacity:
+                      hoveredLink === null || hoveredLink === link.name
+                        ? 1
+                        : 0.3,
+                    scale: hoveredLink === link.name ? 1.05 : 1,
+                    y: hoveredLink === link.name ? -2 : 0,
+                  }}
+                  transition={{
+                    duration: 0.2,
+                    ease: "easeInOut",
+                  }}
+                  whileHover={{
+                    scale: 1.05,
+                    y: -2,
+                  }}
+                >
+                  {link.name} {link.icon}
+                </motion.a>
+              ))}
             </div>
           </div>
         </div>
       </div>
       <Marquee />
-      <About />
+      <Projects />
+      <Info />
+      {/* <About /> */}
       <Connect />
     </section>
   );

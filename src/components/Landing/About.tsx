@@ -4,7 +4,6 @@ import ShinyText from "../textanimations/ShinyText";
 import SectionContainer from "../layouts/SectionContainer";
 import Projects from "./Projects";
 import Info from "./Info";
-import { TextGenerateEffect } from "../ui/text-generate-effect";
 
 export default function About() {
   const word =
@@ -23,7 +22,7 @@ export default function About() {
           />
         </div>
         <div className="flex items-center justify-cente mx-20  text-center">
-          <TextGenerateEffect words={word} className="font-saira" />
+          {/* <TextGenerateEffect words={word} className="font-saira" /> */}
         </div>
       </div>
       <Projects />

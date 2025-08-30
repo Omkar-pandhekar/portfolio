@@ -33,7 +33,7 @@ export default function Contributions() {
 
   return (
     <Fragment>
-      <div className="flex space-x-4">
+      <div className="flex justify-center p-4 px-8">
         <Days />
         <Calendar contributions={contributions} />
         <YearSelect selectedYear={year} onYearChange={setYear} />

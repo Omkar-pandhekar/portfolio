@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { projects } from "../projects";
+import { projects } from "@/components/layouts/constants";
 import SectionContainer from "@/components/layouts/SectionContainer";
 import { MoveLeft, MoveUpRight } from "lucide-react";
 import Link from "next/link";
@@ -10,7 +10,6 @@ import Image from "next/image";
 import { LoadingProgress } from "@/components/magicui/loading-progress";
 
 export default async function HealthPage() {
-  // Get the AI-Notion project specifically
   const project = projects.find(
     (p) => p.title === "Alumni Association Platform"
   );
@@ -29,77 +28,135 @@ export default async function HealthPage() {
           easing="ease-in"
           initialOpacity={0}
         >
-          <div className="relative w-full mt-36 ">
-            <div className="flex items-center justify-between">
+          <div className="relative w-full mt-20 sm:mt-28 md:mt-36 ">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
               <Link href="/projects">
                 <div className="opacity-40 flex items-center gap-2 hover:opacity-60">
                   <MoveLeft size={20} />
-                  <h1>Back to Projects</h1>
+                  <h1 className="text-sm sm:text-base">Back to Projects</h1>
                 </div>
               </Link>
-              <div className=" border-2 px-4 py-1 rounded-lg">
-                <h1>{project.year}</h1>
+              <div className=" border-2 px-3 py-1 rounded-lg text-xs sm:text-sm">
+                <h1 className="text-xs sm:text-sm">{project.year}</h1>
               </div>
             </div>
-            <div className="w-full relative flex items-center justify-center py-6 h-[600px]">
+            <div className="w-full relative flex items-center justify-center py-6 h-64 sm:h-80 md:h-[500px] lg:h-[600px]">
               <Image
                 src={project.img1 || project.src || "/projects/website.jpg"}
                 alt="Profile"
                 width={1000}
                 height={300}
-                className="rounded-xl object-fit h-full w-full"
+                className="rounded-xl object-cover h-full w-full"
               />
             </div>
-            <div className="flex items-center justify-between py-4">
-              <TypingAnimation startOnView={true} delay={200}>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 py-4">
+              <h1 className="text-xl sm:text-2xl md:text-3xl font-clash tracking-wide font-semibold">
                 {project.title}
-              </TypingAnimation>
-              <Button className="px-6 py-6 rounded-full" asChild>
+              </h1>
+              <Button
+                className="px-6 py-6 rounded-full w-full sm:w-auto"
+                asChild
+              >
                 <Link href={project.href}>
                   Check Out <MoveUpRight />
                 </Link>
               </Button>
             </div>
 
-            <div className="flex flex-row gap-24 items-center">
-              <h1 className="opacity-60 font-inter basis-4/6">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-24 items-start">
+              <h1 className="opacity-60 font-inter basis-full md:basis-4/6 text-sm sm:text-base ">
                 {project.intro}
               </h1>
-              <div className="basis-2/6">
-                <div className="flex flex-row items-center gap-5">
-                  <h1>Roles : </h1>
-                  <h1 className="opacity-60">Full stack developer</h1>
+              <div className="basis-full md:basis-2/6 w-full">
+                <div className="flex flex-row items-center justify-between md:justify-start gap-5">
+                  <h1 className="text-sm sm:text-base">Roles : </h1>
+                  <h1 className="opacity-60 text-sm sm:text-base">
+                    Full stack developer
+                  </h1>
                 </div>
-                <div className="flex flex-row items-center gap-4">
-                  <h1>Client : </h1>
-                  <h1 className="opacity-60">Personal Project</h1>
+                <div className="flex flex-row items-center justify-between md:justify-start gap-4">
+                  <h1 className="text-sm sm:text-base">Client : </h1>
+                  <h1 className="opacity-60 text-sm sm:text-base">
+                    Personal Project
+                  </h1>
                 </div>
               </div>
             </div>
 
             <div className="w-full pt-10">
-              <TypingAnimation
-                className="text-3xl"
-                startOnView={true}
-                delay={400}
-              >
+              <h1 className="text-2xl sm:text-3xl font-clash tracking-wide font-semibold">
                 Overview
-              </TypingAnimation>
+              </h1>
               <div className="flex-1 mb-10">
                 <div className="border-t-2 opacity-100 mt-4">
-                  <p className="mt-4 opacity-50">{project.overview}</p>
+                  <h1 className="mt-4 opacity-60  text-sm sm:text-base">
+                    {project.overview}
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div className="w-full pt-2">
+              <h1 className="text-2xl sm:text-3xl font-clash tracking-wide font-semibold">
+                Tech Stack
+              </h1>
+              <div className="flex-1 mb-10">
+                <div className="border-t-2 opacity-100 mt-4">
+                  {project.techstack && project.techstack.length > 0 ? (
+                    <ul className="mt-4 opacity-80 flex flex-wrap gap-2 sm:gap-4">
+                      {project.techstack.map((tech, index) => (
+                        <li
+                          key={index}
+                          className="flex items-center text-sm sm:text-base"
+                        >
+                          <span className="w-2 h-2 bg-current rounded-full mr-3"></span>
+                          {tech}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="mt-4 opacity-50">
+                      No tech stack information available
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
 
+            <div className="w-full pt-2">
+              <h1 className="text-2xl sm:text-3xl font-clash tracking-wide font-semibold">
+                Features
+              </h1>
+              <div className="flex-1 mb-10">
+                <div className="border-t-2 opacity-100 mt-4">
+                  {project.features &&
+                  Object.keys(project.features).length > 0 ? (
+                    <ul className="mt-4 opacity-80 space-y-2">
+                      {Object.entries(project.features).map(
+                        ([key, value], index) => (
+                          <li key={index} className="flex items-start">
+                            <span className="mt-2 w-2 h-2 bg-current rounded-full mr-3"></span>
+                            <div className="text-sm sm:text-base break-words">
+                              <span className="font-semibold opacity-90">
+                                {key}:{" "}
+                              </span>
+                              <span className="opacity-60 ml-1">{value}</span>
+                            </div>
+                          </li>
+                        )
+                      )}
+                    </ul>
+                  ) : (
+                    <p className="mt-4 opacity-50">
+                      No features information available
+                    </p>
+                  )}
+                </div>
+              </div>
+            </div>
             <div className="w-full pt-10">
-              <TypingAnimation
-                className="text-3xl"
-                startOnView={true}
-                delay={400}
-              >
+              <h1 className="text-2xl sm:text-3xl font-clash tracking-wide font-semibold">
                 Design Screens
-              </TypingAnimation>
+              </h1>
               <div className="flex-1 mb-10">
                 <div className="opacity-100 mt-4">
                   {project.screens && project.screens.length > 0 ? (
@@ -107,7 +164,7 @@ export default async function HealthPage() {
                       {project.screens.map((screen, index) => (
                         <div key={index} className="relative group">
                           <div className="mb-2">
-                            <h3 className="text-lg font-medium opacity-80 border-b-2 py-4">
+                            <h3 className="text-xl font-medium opacity-80 border-b-2 py-4 text-center tracking-wider">
                               {index === 0 && "Alumni Profile"}
                               {index === 1 && "Admin Profile"}
                             </h3>
@@ -123,68 +180,6 @@ export default async function HealthPage() {
                   ) : (
                     <p className="mt-4 opacity-50">
                       No design screens available
-                    </p>
-                  )}
-                </div>
-              </div>
-            </div>
-
-            <div className="w-full pt-10">
-              <TypingAnimation
-                className="text-3xl"
-                startOnView={true}
-                delay={400}
-              >
-                Tech Stack
-              </TypingAnimation>
-              <div className="flex-1 mb-10">
-                <div className="border-t-2 opacity-100 mt-4">
-                  {project.techstack && project.techstack.length > 0 ? (
-                    <ul className="mt-4 opacity-80 space-y-2">
-                      {project.techstack.map((tech, index) => (
-                        <li key={index} className="flex items-center">
-                          <span className="w-2 h-2 bg-current rounded-full mr-3"></span>
-                          {tech}
-                        </li>
-                      ))}
-                    </ul>
-                  ) : (
-                    <p className="mt-4 opacity-50">
-                      No tech stack information available
-                    </p>
-                  )}
-                </div>
-              </div>
-            </div>
-
-            <div className="w-full pt-1">
-              <TypingAnimation
-                className="text-3xl"
-                startOnView={true}
-                delay={400}
-              >
-                Features
-              </TypingAnimation>
-              <div className="flex-1 mb-10">
-                <div className="border-t-2 opacity-100 mt-4">
-                  {project.features &&
-                  Object.keys(project.features).length > 0 ? (
-                    <ul className="mt-4 opacity-80 space-y-2">
-                      {Object.entries(project.features).map(
-                        ([key, value], index) => (
-                          <li key={index} className="flex items-center">
-                            <span className="w-2 h-2 bg-current rounded-full mr-3"></span>
-                            <span className="font-semibold opacity-90">
-                              {key}:{" "}
-                            </span>
-                            <span className="opacity-60 ml-1">{value}</span>
-                          </li>
-                        )
-                      )}
-                    </ul>
-                  ) : (
-                    <p className="mt-4 opacity-50">
-                      No features information available
                     </p>
                   )}
                 </div>

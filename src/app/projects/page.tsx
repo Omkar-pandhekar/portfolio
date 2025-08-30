@@ -1,6 +1,6 @@
 "use client";
 import { FocusCards } from "@/components/ui/focus-cards";
-import { projects } from "./projects";
+import { projects } from "@/components/layouts/constants";
 import { Sparkle } from "lucide-react";
 import ShinyText from "@/components/textanimations/ShinyText";
 import SectionContainer from "@/components/layouts/SectionContainer";

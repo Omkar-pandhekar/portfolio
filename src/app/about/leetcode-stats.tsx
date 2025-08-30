@@ -197,7 +197,7 @@ const LeetCodeStats = () => {
           ].map((item) => (
             <div
               key={item.difficulty}
-              className="flex items-center justify-between"
+              className="flex items-center justify-between "
             >
               <div className="flex items-center space-x-3">
                 <span className="text-2xl">
@@ -212,7 +212,7 @@ const LeetCodeStats = () => {
                 </span>
               </div>
               <div className="flex items-center space-x-3">
-                <div className="w-32 bg-gray-700 rounded-full h-2">
+                <div className="w-32 bg-gray-700 rounded-full h-2 hidden sm:block">
                   <div
                     className={`h-2 rounded-full ${item.color}`}
                     style={{

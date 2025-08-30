@@ -22,6 +22,10 @@ export default function GithubStats({ contributions }: Props) {
   );
   const averageContribution = totalContributions / daysFromContribution;
 
+  const bestDayDate = bestDay.day ? new Date(bestDay.day) : null;
+  const hasValidBestDayDate =
+    bestDayDate instanceof Date && !Number.isNaN(bestDayDate.getTime());
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
       <StatItem title="This year">
@@ -33,7 +37,9 @@ export default function GithubStats({ contributions }: Props) {
         <span> days</span>
       </StatItem>
       <StatItem title="Best day">
-        <span>{format(bestDay.day, "PP")} — </span>
+        <span>
+          {hasValidBestDayDate ? format(bestDayDate as Date, "PP") : "N/A"} —
+        </span>
         <AnimatedNumber number={bestDay.count} />
         <span> contributions</span>
       </StatItem>

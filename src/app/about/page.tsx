@@ -13,13 +13,13 @@ export default function AboutPage() {
   return (
     <div>
       <LoadingProgress />
-      <SectionContainer>
-        <Starting />
-      </SectionContainer>
+      <Starting />
       <Marqee />
-      <About />
-      <Education />
-      <Connect />
+      <SectionContainer>
+        <About />
+        {/* <Education /> */}
+        <Connect />
+      </SectionContainer>
     </div>
   );
 }

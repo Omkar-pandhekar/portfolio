@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import FadeContent from "../animations/FadeContent";
 
 interface CardData {
   id?: string | number;
@@ -49,32 +50,34 @@ export function FocusCards({ cards }: { cards: CardData[] }) {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-7xl mx-auto md:px-8 w-full py-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-1 gap-10 max-w-7xl mx-auto md:px-8 w-full py-8">
       {cards.map((card, index) => (
-        <div
-          key={card.key}
-          className={cn("", index % 2 !== 0 ? "md:mt-20" : "")}
-        >
-          <Link href={`/projects/${card.key}`}>
-            <Card
-              card={card}
-              index={index}
-              hovered={hovered}
-              setHovered={setHovered}
-            />
-          </Link>
-          <div className="mt-2 flex justify-between items-center">
-            <div>
-              <div className="text-lg font-medium ">{card.title}</div>
+        <FadeContent key={card.key} delay={index * 500} blur>
+          <div
+            key={card.key}
+            className={cn("", index % 2 !== 0 ? "md:mt-20" : "")}
+          >
+            <Link href={`/projects/${card.key}`}>
+              <Card
+                card={card}
+                index={index}
+                hovered={hovered}
+                setHovered={setHovered}
+              />
+            </Link>
+            <div className="mt-2 flex justify-between items-center">
+              <div>
+                <div className="text-lg font-medium ">{card.title}</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">
+                  {card.description}
+                </div>
+              </div>
               <div className="text-sm text-gray-600 dark:text-gray-400">
-                {card.description}
+                {card.year}
               </div>
             </div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">
-              {card.year}
-            </div>
           </div>
-        </div>
+        </FadeContent>
       ))}
     </div>
   );

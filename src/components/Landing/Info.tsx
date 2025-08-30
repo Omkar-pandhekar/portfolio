@@ -84,7 +84,7 @@ export default function Info() {
                   <AccordionItem
                     key={index}
                     value={`item-${index}`}
-                    className="rounded-xl  bg-white dark:bg-zinc-900"
+                    className="rounded-xl  bg-white dark:bg-zinc-900 p-6"
                   >
                     <AccordionTrigger className="px-4 py-3 hover:no-underline">
                       <div className="flex items-center gap-3">

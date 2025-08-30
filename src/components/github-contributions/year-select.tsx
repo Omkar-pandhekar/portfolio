@@ -11,7 +11,7 @@ export default function YearSelect({ selectedYear, onYearChange }: Props) {
   const yearOptions = Array.from({ length: 5 }, (_, i) => thisYear - i);
 
   return (
-    <div className="flex flex-col space-y-2 text-sm pt-4 -pl-8">
+    <div className="flex flex-col space-y-2 text-sm pt-4">
       {yearOptions.map((year) => (
         <button
           onClick={() => {

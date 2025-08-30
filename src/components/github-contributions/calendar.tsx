@@ -15,14 +15,13 @@ export default function Calendar({ contributions }: Props) {
   const { weeks, months, colors } = contributions;
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-
   return (
     <TooltipProvider delayDuration={400} skipDelayDuration={100}>
       <div
         ref={ref}
-        className="relative flex flex-col space-y-4 w-full max-w-[calc(100%-20px)] sm:w-[calc(100%-40px)] md:w-[800px] lg:w-[1000px]"
+        className="relative flex flex-1 flex-col mx-5 space-y-4 max-w-[250px] md:max-w-lg xl:max-w-7xl transition-all "
       >
-        <ul className="flex justify-end gap-0.75 overflow-hidden text-xs dark:text-neutral-400 md:justify-start">
+        <ul className="flex justify-end gap-0.75 overflow-hidden text-xs dark:text-neutral-400 md:justify-center">
           {months.map((month) => (
             <li
               key={month.firstDay}
@@ -36,7 +35,7 @@ export default function Calendar({ contributions }: Props) {
           ))}
         </ul>
 
-        <div className="flex justify-start gap-1.5 overflow-hidden">
+        <div className="w-full flex justify-center gap-1.5 overflow-hidden">
           {weeks?.map((week) => (
             <div key={week.firstDay}>
               {week.contributionDays.map((contribution) => {
@@ -77,7 +76,7 @@ export default function Calendar({ contributions }: Props) {
           ))}
         </div>
 
-        <div className="flex flex-wrap items-center justify-between gap-2">
+        <div className="flex flex-wrap items-center justify-between gap-2 mt-1">
           <div className="flex items-center gap-2 text-sm">
             <span className="dark:text-neutral-400">Less</span>
             <ul className="flex gap-1">

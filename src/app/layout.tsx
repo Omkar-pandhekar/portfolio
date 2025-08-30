@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/providers/theme-provider";
 import { NavbarDemo } from "@/components/layouts/navbar";
 import { Inter, Saira, Orbitron } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
+import LenisScroll from "@/components/Landing/LenisScroll";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -36,14 +37,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${saira.variable} ${inter.variable}${orbitron.variable}`}
+      className={`${saira.variable} ${inter.variable}${orbitron.variable} selection:bg-lime-300 selection:text-black`}
       suppressHydrationWarning
     >
       <body>
         <ThemeProvider>
-          {/* <Header /> */}
           <NavbarDemo />
-          {children}
+          <LenisScroll>{children}</LenisScroll>
           <Footer />
         </ThemeProvider>
         <Toaster position="top-right" />
