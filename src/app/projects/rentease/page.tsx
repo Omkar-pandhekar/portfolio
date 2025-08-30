@@ -41,7 +41,7 @@ export default async function RenteasePage() {
             </div>
             <div className="w-full relative flex items-center justify-center py-6 h-64 sm:h-80 md:h-[500px] lg:h-[600px]">
               <Image
-                src={project.img1 || project.src || "/projects/website.jpg"}
+                src="/projects/rentease/Start.webp"
                 alt="Profile"
                 width={1000}
                 height={300}
