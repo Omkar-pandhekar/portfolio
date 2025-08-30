@@ -95,7 +95,7 @@ export const projects = [
         "Manages monthly rent, security deposits, and tracks payment history with multiple statuses.",
     },
     href: "/projects/rentease",
-    src: "/projects/rentease/intro.webp",
+    src: "/projects/rentease/Intro.png",
     img1: "/projects/rentease/Start.webp",
     screens: ["/projects/rentease/Home.webp", "/projects/rentease/Search.webp"],
   },
@@ -130,7 +130,7 @@ export const projects = [
         "Securely invite users to documents and manage their access with Owner and Editor roles via Clerk authentication.",
     },
     href: "https://ai-notion-m0yakz7yl-omkarpandhekar-8907s-projects.vercel.app",
-    src: "/projects/notion/Home.png",
+    src: "/projects/notion/Home-1.webp",
     img1: "",
   },
   {
@@ -203,7 +203,7 @@ export const projects = [
         "Integrates with Cloudinary for efficient cloud storage and delivery of images for the gallery and user profiles.",
     },
     href: "/projects/alumni-platform",
-    src: "/projects/alumni/Poster.webp",
+    src: "/projects/alumni/Intro.png",
     img1: "/projects/alumni/Home.webp",
     screens: [
       "/projects/alumni/AlumniProfile.webp",
