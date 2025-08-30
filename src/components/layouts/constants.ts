@@ -94,10 +94,10 @@ export const projects = [
       "Secure Payment System":
         "Manages monthly rent, security deposits, and tracks payment history with multiple statuses.",
     },
-    href: "/projects/rentease",
-    src: "/projects/rentease/Intro.png",
-    img1: "/projects/rentease/Start.webp",
-    screens: ["/projects/rentease/Home.webp", "/projects/rentease/Search.webp"],
+    href: "https://github.com/Omkar-pandhekar/rental-app",
+    src: "/projects/Rentease/Intro.png",
+    img1: "/projects/Rentease/Start.webp",
+    screens: ["/projects/Rentease/Home.webp", "/projects/Rentease/Search.webp"],
   },
   {
     id: "3",
@@ -130,7 +130,7 @@ export const projects = [
         "Securely invite users to documents and manage their access with Owner and Editor roles via Clerk authentication.",
     },
     href: "https://ai-notion-m0yakz7yl-omkarpandhekar-8907s-projects.vercel.app",
-    src: "/projects/notion/Home-1.webp",
+    src: "/projects/Notion/Home-1.webp",
     img1: "",
   },
   {
@@ -162,7 +162,7 @@ export const projects = [
       "Multi-Role Authentication":
         "Secure, role-based access control with distinct features for Students, Admins, and regular users.",
     },
-    href: "/projects/social-shelf",
+    href: "https://github.com/Omkar-pandhekar/social-shelf",
     src: "/projects/SocialShelf/Intro.webp",
     img1: "/projects/SocialShelf/Home.webp",
     screens: [
@@ -202,12 +202,12 @@ export const projects = [
       "Cloud Media Management":
         "Integrates with Cloudinary for efficient cloud storage and delivery of images for the gallery and user profiles.",
     },
-    href: "/projects/alumni-platform",
-    src: "/projects/alumni/Intro.png",
-    img1: "/projects/alumni/Home.webp",
+    href: "https://github.com/Omkar-pandhekar/Alumni_Association_Platform",
+    src: "/projects/Alumni/Intro.png",
+    img1: "/projects/Alumni/Home.webp",
     screens: [
-      "/projects/alumni/AlumniProfile.webp",
-      "/projects/alumni/AdminFeatures.webp",
+      "/projects/Alumni/AlumniProfile.webp",
+      "/projects/Alumni/AdminFeatures.webp",
     ],
   },
   {
@@ -233,7 +233,7 @@ export const projects = [
       "Market Intelligence":
         "Provides data-driven price insights for buyers and sellers in the automotive market.",
     },
-    href: "/projects/car-price-predictor",
+    href: "https://github.com/Omkar-pandhekar/car-price-prediction",
     src: "/projects/CarPricePrediction/Intro.webp",
     img1: "/projects/car-predictor/ui.png",
     screens: ["/projects/CarPricePrediction/Page.webp"],

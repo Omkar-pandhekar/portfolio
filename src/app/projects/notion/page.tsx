@@ -98,7 +98,7 @@ export default async function NotionPage() {
                     project.img1 || project.src || "/projects/website.jpg"
                   }
                 >
-                  <source src="/projects/notion/Intro-2.mp4" type="video/mp4" />
+                  <source src="/projects/Notion/Intro-2.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
