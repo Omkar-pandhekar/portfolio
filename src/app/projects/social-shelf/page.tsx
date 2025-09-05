@@ -164,11 +164,7 @@ export default async function HealthPage() {
                           <div className="mb-2">
                             <h3 className="text-lg font-medium opacity-80 border-b-2 py-4">
                               {index === 0 && "User Overview Dashboard"}
-                              {index === 1 && "Appointment Management"}
-                              {index === 2 && "Real-time Chat System"}
-                              {index === 3 && "Medical Files & Documents"}
-                              {index === 4 && "Doctor Dashboard"}
-                              {index === 5 && "Hospital Management Overview"}
+                              {index === 1 && "Admin Overview Dashboard"}
                             </h3>
                           </div>
                           <img

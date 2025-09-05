@@ -1,7 +1,17 @@
 import type { Config } from "tailwindcss";
+import animate from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
+  safelist: [
+    // Ensure marquee animations and variants are preserved in production
+    "animate-marquee",
+    "animate-marquee-vertical",
+    // Arbitrary variants/classes used in marquee component
+    "group-hover:[animation-play-state:paused]",
+    "group-hover:[animation-duration:40s]",
+    "[animation-direction:reverse]",
+  ],
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -114,5 +124,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [animate],
 } satisfies Config;

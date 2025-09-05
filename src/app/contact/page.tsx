@@ -71,7 +71,7 @@ export default function Contact() {
     <>
       <LoadingProgress />
       <SectionContainer>
-        <div className="relative w-full mt-48">
+        <div className="relative w-full pt-48">
           <div className="flex items-center gap-2 ml-8">
             <Sparkle size={20} className="text-green-500 dark:text-lime-500" />
             <ShinyText

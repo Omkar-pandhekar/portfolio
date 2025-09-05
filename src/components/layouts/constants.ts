@@ -167,7 +167,7 @@ export const projects = [
     img1: "/projects/SocialShelf/Home.webp",
     screens: [
       "/projects/SocialShelf/Student-Dashboard.webp",
-      "/projects/SocialShelf/Admin-dashboard.webp",
+      "/projects/SocialShelf/Admin-Dashboard.webp",
     ],
   },
 

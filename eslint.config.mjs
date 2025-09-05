@@ -20,7 +20,7 @@ const eslintConfig = [
       "@typescript-eslint/no-wrapper-object-types": "off",
       "@typescript-eslint/no-unsafe-function-type": "off",
     },
-  },'
+  },
 ];
 
 export default eslintConfig;
