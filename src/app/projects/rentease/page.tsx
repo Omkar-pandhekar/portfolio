@@ -168,9 +168,11 @@ export default async function RenteasePage() {
                               {index === 1 && "Search Page"}
                             </h3>
                           </div>
-                          <img
+                          <Image
                             src={String(screen) || "/projects/website.jpg"}
                             alt={`${project.title} Screen ${index + 1}`}
+                            width={1200}
+                            height={800}
                             className="rounded-xl object-cover w-full h-full"
                           />
                         </div>

@@ -42,6 +42,7 @@ export const ScrollTextReveal = ({
 
   // Intersection Observer to detect when text is visible
   useEffect(() => {
+    const node = textRef.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
@@ -52,13 +53,13 @@ export const ScrollTextReveal = ({
       }
     );
 
-    if (textRef.current) {
-      observer.observe(textRef.current);
+    if (node) {
+      observer.observe(node);
     }
 
     return () => {
-      if (textRef.current) {
-        observer.unobserve(textRef.current);
+      if (node) {
+        observer.unobserve(node);
       }
     };
   }, []);

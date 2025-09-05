@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import FadeContent from "../animations/FadeContent";
@@ -34,10 +35,13 @@ export const Card = React.memo(
         hovered !== null && hovered !== index && "opacity-50"
       )}
     >
-      <img
+      <Image
         src={card.src}
         alt={card.title}
-        className="object-cover absolute inset-0 w-full h-full"
+        fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+        unoptimized
+        className="object-cover absolute inset-0"
       />
       <div className="absolute inset-0 bg-black/50 transition-opacity duration-300 opacity-0"></div>
     </div>

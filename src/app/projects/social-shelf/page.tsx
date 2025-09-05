@@ -167,9 +167,11 @@ export default async function HealthPage() {
                               {index === 1 && "Admin Overview Dashboard"}
                             </h3>
                           </div>
-                          <img
+                          <Image
                             src={String(screen) || "/projects/website.jpg"}
                             alt={`${project.title} Screen ${index + 1}`}
+                            width={1200}
+                            height={800}
                             className="rounded-xl object-cover w-full h-full"
                           />
                         </div>

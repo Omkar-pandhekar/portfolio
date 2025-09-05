@@ -10,6 +10,7 @@ import {
 import { navigationLinks } from "./constants";
 import { ModeToggle } from "../modeToggle/modeToggle";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export function NavbarDemo() {
   const pathname = usePathname();
@@ -40,7 +41,7 @@ export function NavbarDemo() {
       {/* Bottom Navigation Bar - Outside of Navbar component for proper positioning */}
       <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/80 dark:bg-neutral-950/80 backdrop-blur-md border-t border-neutral-200 dark:border-neutral-800">
         <div className="flex items-center justify-around px-4 py-3">
-          <a
+          <Link
             href="/"
             className={`flex flex-col items-center gap-1 px-3 py-2 rounded-lg transition-colors duration-200 ${
               pathname === "/"
@@ -62,9 +63,9 @@ export function NavbarDemo() {
               />
             </svg>
             <span className="text-xs font-medium">Home</span>
-          </a>
+          </Link>
 
-          <a
+          <Link
             href="/about"
             className={`flex flex-col items-center gap-1 px-3 py-2 rounded-lg transition-colors duration-200 ${
               pathname === "/about"
@@ -86,9 +87,9 @@ export function NavbarDemo() {
               />
             </svg>
             <span className="text-xs font-medium">About</span>
-          </a>
+          </Link>
 
-          <a
+          <Link
             href="/projects"
             className={`flex flex-col items-center gap-1 px-3 py-2 rounded-lg transition-colors duration-200 ${
               pathname === "/projects"
@@ -110,9 +111,9 @@ export function NavbarDemo() {
               />
             </svg>
             <span className="text-xs font-medium">Projects</span>
-          </a>
+          </Link>
 
-          <a
+          <Link
             href="/contact"
             className={`flex flex-col items-center gap-1 px-3 py-2 rounded-lg transition-colors duration-200 ${
               pathname === "/contact"
@@ -134,7 +135,7 @@ export function NavbarDemo() {
               />
             </svg>
             <span className="text-xs font-medium">Contact</span>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
