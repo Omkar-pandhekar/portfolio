@@ -1,7 +1,5 @@
 "use client";
 
-"use client";
-
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/magicui/marquee";
 import { IconType } from "react-icons";
@@ -133,7 +131,7 @@ const LanguageCard = ({
 export default function Marqee() {
   return (
     <div className="relative flex w-full border-y-[1px] flex-col items-center justify-center overflow-hidden py-8">
-      <Marquee className="[--duration:20s]">
+      <Marquee durationSec={20} gap="0.5rem">
         {languages.map((language) => (
           <div key={language.name} className="mx-2">
             <LanguageCard {...language} />

@@ -2,39 +2,24 @@ import { cn } from "@/lib/utils";
 import { ComponentPropsWithoutRef } from "react";
 
 interface MarqueeProps extends ComponentPropsWithoutRef<"div"> {
-  /**
-   * Optional CSS class name to apply custom styles
-   */
+  /** Optional CSS class name to apply custom styles */
   className?: string;
-  /**
-   * Whether to reverse the animation direction
-   * @default false
-   */
+  /** Whether to reverse the animation direction @default false */
   reverse?: boolean;
-  /**
-   * Whether to pause the animation on hover
-   * @default false
-   */
+  /** Whether to pause the animation on hover @default false */
   pauseOnHover?: boolean;
-  /**
-   * Whether to slow down the animation on hover
-   * @default false
-   */
+  /** Whether to slow down the animation on hover @default false */
   slowOnHover?: boolean;
-  /**
-   * Content to be displayed in the marquee
-   */
+  /** Content to be displayed in the marquee */
   children: React.ReactNode;
-  /**
-   * Whether to animate vertically instead of horizontally
-   * @default false
-   */
+  /** Whether to animate vertically instead of horizontally @default false */
   vertical?: boolean;
-  /**
-   * Number of times to repeat the content
-   * @default 4
-   */
+  /** Number of times to repeat the content @default 4 */
   repeat?: number;
+  /** Duration in seconds for one full cycle @default 40 */
+  durationSec?: number;
+  /** Gap between repeated items (any valid CSS length) @default 1rem */
+  gap?: string;
 }
 
 export function Marquee({
@@ -45,6 +30,8 @@ export function Marquee({
   children,
   vertical = false,
   repeat = 4,
+  durationSec = 40,
+  gap = "1rem",
   ...props
 }: MarqueeProps) {
   return (
@@ -60,8 +47,9 @@ export function Marquee({
       )}
       style={
         {
-          "--duration": "40s",
-          "--gap": "1rem",
+          // CSS variables used by animation keyframes
+          "--duration": `${durationSec}s`,
+          "--gap": gap,
           gap: "var(--gap)",
         } as React.CSSProperties
       }
