@@ -1,5 +1,7 @@
+"use client";
 import { cn } from "@/lib/utils";
 import { ComponentPropsWithoutRef } from "react";
+import { motion } from "framer-motion";
 
 interface MarqueeProps extends ComponentPropsWithoutRef<"div"> {
   /** Optional CSS class name to apply custom styles */
@@ -34,52 +36,55 @@ export function Marquee({
   gap = "1rem",
   ...props
 }: MarqueeProps) {
+  // Determine axis and values for animation
+  const animateKey = vertical ? "y" : "x";
+  const animateValues = reverse ? [0, 2000] : [0, -2000];
+
   return (
     <div
       {...props}
       className={cn(
-        "group flex overflow-hidden p-2",
+        "group overflow-hidden p-2",
         {
+          flex: true,
           "flex-row": !vertical,
           "flex-col": vertical,
         },
         className
       )}
-      style={
-        {
-          // CSS variables used by animation keyframes
-          "--duration": `${durationSec}s`,
-          "--gap": gap,
-          gap: "var(--gap)",
-        } as React.CSSProperties
-      }
+      style={{ gap }}
     >
-      {Array(repeat)
-        .fill(0)
-        .map((_, i) => (
-          <div
-            key={i}
-            className={cn(
-              "flex shrink-0 justify-around",
-              vertical ? "animate-marquee-vertical" : "animate-marquee",
-              {
+      <motion.div
+        className={cn("flex whitespace-nowrap", {
+          "flex-row": !vertical,
+          "flex-col": vertical,
+        })}
+        animate={{ [animateKey]: animateValues as unknown as number[] }}
+        transition={{
+          [animateKey]: {
+            repeat: Infinity,
+            repeatType: "loop",
+            duration: durationSec,
+            ease: "linear",
+            repeatDelay: 0,
+          },
+        }}
+      >
+        {Array(repeat)
+          .fill(0)
+          .map((_, i) => (
+            <div
+              key={i}
+              className={cn("flex items-center justify-around", {
                 "flex-row": !vertical,
                 "flex-col": vertical,
-                "group-hover:[animation-play-state:paused]": pauseOnHover,
-                "group-hover:[animation-duration:40s]": slowOnHover,
-              }
-            )}
-            style={
-              {
-                gap: "var(--gap)",
-                animationDuration: "var(--duration)",
-                animationDirection: reverse ? "reverse" : undefined,
-              } as React.CSSProperties
-            }
-          >
-            {children}
-          </div>
-        ))}
+              })}
+              style={{ gap }}
+            >
+              {children}
+            </div>
+          ))}
+      </motion.div>
     </div>
   );
 }
