@@ -17,10 +17,17 @@ const Hero = () => {
 
       <div className="space-y-6 text-lg text-neutral-600   dark:text-neutral-300 leading-relaxed">
         <p>
-          I&apos;m a software developer with a keen focus on creating beautiful
-          and intuitive user interfaces. I specialize in React.js, Next.js,
-          TypeScript, and Tailwind to build scalable and efficient web
-          applications.
+          I&apos;m a full-stack developer with a keen focus on creating
+          beautiful and intuitive user interfaces. While I specialize in
+          building responsive front-ends with React.js, Next.js, TypeScript, and
+          Tailwind CSS, I also possess strong back-end skills in Node.js,
+          Express, and SQL/NoSQL databases.
+        </p>
+        <p>
+          {" "}
+          My approach is grounded in a solid understanding of Data Structures
+          and Algorithms, allowing me to build not just scalable and efficient,
+          but also robust and high-performance web applications.
         </p>
         {/* <p>
           I bring extensive experience in web development, having worked with
