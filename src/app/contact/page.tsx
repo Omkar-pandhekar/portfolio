@@ -80,7 +80,7 @@ export default function Contact() {
       <SectionContainer>
         <FadeContent
           blur={true}
-          duration={500}
+          duration={1500}
           easing="ease-in"
           initialOpacity={0}
         >

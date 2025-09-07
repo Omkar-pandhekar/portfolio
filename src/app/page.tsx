@@ -9,7 +9,7 @@ export default function Home() {
       <LoadingProgress />
       <FadeContent
         blur={true}
-        duration={500}
+        duration={1500}
         easing="ease-in"
         initialOpacity={0}
       >
