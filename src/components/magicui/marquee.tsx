@@ -59,19 +59,20 @@ export function Marquee({
         .map((_, i) => (
           <div
             key={i}
-            className={cn("flex shrink-0 justify-around", {
-              "flex-row": !vertical,
-              "flex-col": vertical,
-              "group-hover:[animation-play-state:paused]": pauseOnHover,
-              "group-hover:[animation-duration:40s]": slowOnHover,
-            })}
+            className={cn(
+              "flex shrink-0 justify-around",
+              vertical ? "animate-marquee-vertical" : "animate-marquee",
+              {
+                "flex-row": !vertical,
+                "flex-col": vertical,
+                "group-hover:[animation-play-state:paused]": pauseOnHover,
+                "group-hover:[animation-duration:40s]": slowOnHover,
+              }
+            )}
             style={
               {
                 gap: "var(--gap)",
-                animationName: vertical ? "marquee-vertical" : "marquee",
                 animationDuration: "var(--duration)",
-                animationTimingFunction: "linear",
-                animationIterationCount: "infinite",
                 animationDirection: reverse ? "reverse" : undefined,
               } as React.CSSProperties
             }
