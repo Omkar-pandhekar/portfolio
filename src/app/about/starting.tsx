@@ -2,6 +2,7 @@ import { WordRotate } from "@/components/magicui/word-rotate";
 import CircularText from "@/components/textanimations/CircularText";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const starting = () => {
@@ -20,7 +21,7 @@ const starting = () => {
             <CircularText
               text="OMKAR*R*PANDHEKAR*"
               onHover="speedUp"
-              spinDuration={20}
+              spinDuration={10}
               className="size-12"
             />
           </div>
@@ -52,7 +53,11 @@ const starting = () => {
             complex business requirements into high-performance, scalable
             software solutions.
           </p>
-          <Button className="rounded-full px-8 py-6 text-md">My resume</Button>
+          <Link href="https://drive.google.com/file/d/1UUyyu6LMZaTp4CQaZ7-JLkqbTt5jFcI4/view?usp=sharing">
+            <Button className="rounded-full px-8 py-6 text-md">
+              My resume
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

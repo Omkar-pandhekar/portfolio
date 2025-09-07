@@ -56,7 +56,7 @@ export function FocusCards({ cards }: { cards: CardData[] }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-1 gap-10 max-w-7xl mx-auto md:px-8 w-full py-8">
       {cards.map((card, index) => (
-        <FadeContent key={card.key} delay={index * 500} blur>
+        <FadeContent key={card.key} blur>
           <div
             key={card.key}
             className={cn("", index % 2 !== 0 ? "md:mt-20" : "")}

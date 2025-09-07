@@ -62,10 +62,14 @@ export default function Hero() {
           <div className="basis-5/6">
             <h1 className="text-4xl font-semibold font-clash sm:text-6xl md:text-6xl lg:text-7xl">
               Crafting{" "}
-              <span className="text-green-500 dark:text-lime-300">purpose driven</span>
+              <span className="text-green-500 dark:text-lime-300">
+                purpose driven
+              </span>
               <br />
               experiences that{" "}
-              <span className="text-green-500 dark:text-lime-300">inspire & engage.</span>
+              <span className="text-green-500 dark:text-lime-300">
+                inspire & engage.
+              </span>
             </h1>
           </div>
         </div>
@@ -86,10 +90,10 @@ export default function Hero() {
             <div className="border-t-2 bg-gray-950 opacity-100"></div>
           </div>
         </div>
-        <div className="mb-8 md:mb-12 flex flex-col items-start justify-between gap-6 md:flex-row-reverse md:items-end md:gap-8">
+        <div className="mb-8 md:mb-12 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end md:gap-8">
           {/* Paragraph */}
 
-          <div className="flex-1 mb-2 w-full hidden sm:block">
+          <div className="flex-1  mb-2 w-full hidden sm:block">
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 text-xs sm:text-sm font-medium uppercase opacity-80 group">
               {socialLinks.map((link) => (
                 <motion.a

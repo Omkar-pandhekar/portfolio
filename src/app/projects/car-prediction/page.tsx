@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import FadeContent from "@/components/animations/FadeContent";
 import { LoadingProgress } from "@/components/magicui/loading-progress";
+import Image from "next/image";
 
 export default async function HealthPage() {
   // Get the AI-Notion project specifically
@@ -159,7 +160,7 @@ export default async function HealthPage() {
                               {index === 0 && "Form page"}
                             </h3>
                           </div>
-                          <img
+                          <Image
                             src={String(screen) || "/projects/website.jpg"}
                             alt={`${project.title} Screen ${index + 1}`}
                             className="rounded-xl object-cover w-full h-full"
