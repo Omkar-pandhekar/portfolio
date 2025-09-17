@@ -3,14 +3,12 @@ import { projects } from "@/components/layouts/constants";
 import SectionContainer from "@/components/layouts/SectionContainer";
 import { MoveLeft, MoveUpRight } from "lucide-react";
 import Link from "next/link";
-import { TypingAnimation } from "@/components/magicui/typing-animation";
 import { Button } from "@/components/ui/button";
 import FadeContent from "@/components/animations/FadeContent";
 import Image from "next/image";
 import { LoadingProgress } from "@/components/magicui/loading-progress";
 
 export default async function HealthPage() {
-  // Get the AI-Notion project specifically
   const project = projects.find((p) => p.title === "Healthcare Portal");
 
   if (!project) {
@@ -173,7 +171,7 @@ export default async function HealthPage() {
                               {index === 5 && "Hospital Management Overview"}
                             </h3>
                           </div>
-                          <img
+                          <Image
                             src={String(screen) || "/projects/website.jpg"}
                             alt={`${project.title} Screen ${index + 1}`}
                             className="rounded-xl object-cover w-full h-full"
