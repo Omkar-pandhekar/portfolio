@@ -14,7 +14,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 export default function Info() {
-  const [selectedItem, setSelectedItem] = useState<number | null>(null);
+  const [selectedItem, setSelectedItem] = useState<number>(0);
   const [lastSelectedItem, setLastSelectedItem] = useState<number>(0);
 
   const accordionItems = [
@@ -67,16 +67,14 @@ export default function Info() {
                 type="single"
                 collapsible
                 className="w-full space-y-2"
-                value={
-                  selectedItem !== null ? `item-${selectedItem}` : undefined
-                }
+                value={`item-${selectedItem}`}
                 onValueChange={(value) => {
                   if (value) {
                     const index = parseInt(value.replace("item-", ""));
                     setSelectedItem(index);
                     setLastSelectedItem(index);
                   } else {
-                    setSelectedItem(null); // No item selected when collapsed
+                    setSelectedItem(0); // Default to first item when collapsed
                   }
                 }}
               >
@@ -101,8 +99,8 @@ export default function Info() {
             </div>
             <div className="flex-1 flex items-start justify-center overflow-hidden rounded-3xl">
               <motion.img
-                src={accordionItems[selectedItem ?? lastSelectedItem].image}
-                alt={accordionItems[selectedItem ?? lastSelectedItem].title}
+                src={accordionItems[selectedItem].image}
+                alt={accordionItems[selectedItem].title}
                 className="w-full h-80 object-cover"
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
