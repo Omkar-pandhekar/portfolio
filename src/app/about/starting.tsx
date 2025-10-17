@@ -11,7 +11,7 @@ const starting = () => {
       <div className="flex flex-col lg:flex-row items-center gap-8 max-w-6xl w-full mx-auto py-16">
         <div className="relative flex-shrink-0 w-full flex justify-center lg:w-auto lg:justify-start">
           <Image
-            src="/assets/profile.jpeg"
+            src="/assets/Profile-1.png"
             alt="Profile"
             width={350}
             height={600}
