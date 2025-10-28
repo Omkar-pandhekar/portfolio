@@ -53,7 +53,7 @@ const starting = () => {
             complex business requirements into high-performance, scalable
             software solutions.
           </p>
-          <Link href="https://drive.google.com/file/d/1UUyyu6LMZaTp4CQaZ7-JLkqbTt5jFcI4/view?usp=sharing">
+          <Link href="https://drive.google.com/file/d/164ANnz8SSvSwuEG36FeCaTd2oamLIhak/view?usp=sharing">
             <Button className="rounded-full px-8 py-6 text-md">
               My resume
             </Button>
