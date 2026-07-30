@@ -151,7 +151,7 @@ export default async function NotionPage() {
                               <span className="opacity-60 ml-1">{value}</span>
                             </div>
                           </li>
-                        )
+                        ),
                       )}
                     </ul>
                   ) : (

@@ -5,6 +5,28 @@ export const navigationLinks = [
   { link: "/contact", name: "Contact" },
 ];
 
+export interface ExperienceEntry {
+  company: string;
+  role: string;
+  location: string;
+  period: string;
+  highlights: string[];
+}
+
+export const experiences: ExperienceEntry[] = [
+  {
+    company: "JLL Technologies",
+    role: "Software Development Engineer Intern",
+    location: "India",
+    period: "Jan 2026 – July 2026",
+    highlights: [
+      "Contributed to a high-priority Google Project as an External Workforce, optimizing enterprise integration workflows to successfully process and transfer data, slashing system execution time from 5 hours to 2 hours a 60% performance gain.",
+      "Architected and implemented critical new features for the Java-based Data Integration Tool, streamlining data processing workflows and significantly reducing overall execution time for complex client environments.",
+      "Developing Agentic AI capabilities for the Integration Toolbox in collaboration with the JLLT Integration team, automating complex system integrations and intelligent data mapping.",
+    ],
+  },
+];
+
 export const siteMetadata = {
   title: "Omkar Pandhekar",
   author: "Omkar Pandhekar",

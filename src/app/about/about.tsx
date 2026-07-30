@@ -6,6 +6,7 @@ import Hero from "./hero";
 import GithubContributions from "@/components/github-contributions/github-contributions";
 import LeetCodeStats from "./leetcode-stats";
 import Education from "./education";
+import Experience from "./experience";
 
 const about = () => {
   return (
@@ -23,6 +24,7 @@ const about = () => {
       </div>
       <div className="flex flex-col items-center justify-center gap-6 w-full">
         <Hero />
+        <Experience />
         <Education />
         <div className="w-full pt-10">
           <GithubContributions />

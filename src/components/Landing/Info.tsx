@@ -10,11 +10,14 @@ import SectionContainer from "../layouts/SectionContainer";
 import ShinyText from "../textanimations/ShinyText";
 import { TypingAnimation } from "../magicui/typing-animation";
 import Demo from "../layouts/Demo";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 
 export default function Info() {
-  const [selectedItem, setSelectedItem] = useState<string>("item-0");
+  // Keep Accordion controlled for lifetime:
+  // use "" to represent "collapsed" instead of undefined.
+  const [accordionValue, setAccordionValue] = useState<string>("item-0");
+  const [lastOpenValue, setLastOpenValue] = useState<string>("item-0");
 
   const accordionItems = [
     {
@@ -42,6 +45,13 @@ export default function Info() {
         "https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ];
+
+  const activeValue = accordionValue || lastOpenValue;
+  const activeIndex = useMemo(() => {
+    const parsed = Number.parseInt(activeValue.replace("item-", ""), 10);
+    return Number.isFinite(parsed) ? parsed : 0;
+  }, [activeValue]);
+
   return (
     <SectionContainer>
       <div className="relative w-full py-12 pt-20">
@@ -66,9 +76,11 @@ export default function Info() {
                 type="single"
                 collapsible
                 className="w-full space-y-2"
-                value={selectedItem}
+                value={accordionValue}
                 onValueChange={(value) => {
-                  setSelectedItem(value || "item-0");
+                  const next = value ?? "";
+                  setAccordionValue(next);
+                  if (next) setLastOpenValue(next);
                 }}
               >
                 {accordionItems.map((item, index) => (
@@ -92,14 +104,8 @@ export default function Info() {
             </div>
             <div className="flex-1 flex items-start justify-center overflow-hidden rounded-3xl">
               <motion.img
-                src={
-                  accordionItems[parseInt(selectedItem.replace("item-", ""))]
-                    .image
-                }
-                alt={
-                  accordionItems[parseInt(selectedItem.replace("item-", ""))]
-                    .title
-                }
+                src={accordionItems[activeIndex]?.image}
+                alt={accordionItems[activeIndex]?.title}
                 className="w-full h-80 object-cover"
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
